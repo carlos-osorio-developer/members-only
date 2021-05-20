@@ -1,0 +1,16 @@
+<p id="notice" class="alert alert-primary"><%= notice %></p>
+
+<p class="ms-4">
+  <strong class="fs-5">Name:</strong>
+  <em class="fs-6"><%= @user.name %></em>
+</p>
+
+<p class="ms-4">
+  <strong class="fs-5">Email:</strong>
+  <em class="fs-6"><%= @user.email %></em>
+</p>
+
+<div class="btn-group mx-4 mb-4" role="group">
+<%= link_to 'Edit', edit_user_registration_path(@user), class: 'btn btn-success' %>
+<%= link_to 'Back', users_path, class: 'btn btn-primary' %>
+</div>
