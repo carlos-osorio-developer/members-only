@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;"">
+  <div class="container-fluid">
+    <%= link_to root_path, style: "width: 100px" do %>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQjmuMZAw4YHY-Z2Dx9f0GcqSySSvdu8DDsw&usqp=CAU" class="w-100 p-2">
+    <% end %>
+    <%= link_to 'Only-members APP', root_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">      
+      <%= link_to "Users", users_path, class:"nav-link" %>
+      <%= link_to "Posts", posts_path, class:"nav-link" %>
+      <a class="nav-link">|</a>
+      <% if current_user %>
+        <%= link_to current_user.name, edit_user_registration_path, class:"nav-link" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+      <% else %>
+        <%= link_to "Log in", new_user_session_path, class:"nav-link" %>
+        <%= link_to "Register", new_user_registration_path, class:"nav-link" %>      
+      <% end %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
