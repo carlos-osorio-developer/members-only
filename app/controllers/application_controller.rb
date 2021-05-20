@@ -11,7 +11,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
 
-  private 
-
   before_action :authenticate_user!, only: %i[new create]
 end
