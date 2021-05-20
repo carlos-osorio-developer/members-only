@@ -18,13 +18,10 @@
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <% if current_user %>
-          <td><%= post.user.name %>
+          <td><%= post.user.name %>        
         <% else %>
           <td><%= link_to 'Please log in', new_user_session_path %></td>
-        <% end %>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>        
       </tr>
     <% end %>
   </tbody>
