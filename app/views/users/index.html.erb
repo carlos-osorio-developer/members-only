@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="alert alert-primary"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class = "container">Users</h1>
 
-<table>
+<table class="table container table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -26,7 +26,9 @@
 
 <br>
 
-<%= link_to 'New User', new_user_registration_path %>
+<div class="btn-group mx-4 mb-4" role="group" aria-label="Basic example">
+<%= link_to 'New User', new_user_registration_path, class: 'btn btn-success' %>
 <% if current_user %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
 <% end %>
+</div>
