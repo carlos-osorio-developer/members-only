@@ -57,7 +57,7 @@ class PostsController < ApplicationController
   end
 
   private
-    before_action :authenticate_user!, only [:new, :create]
+    before_action :authenticate_user!, only: [:new, :create]
 
     # Use callbacks to share common setup or constraints between actions.
     def set_post
