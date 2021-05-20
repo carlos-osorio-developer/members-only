@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 class = "container">Posts</h1>
 
-<table>
+<table class="table container table-hover">
   <thead>
     <tr>
       <th>Title</th>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: 'btn btn-outline-success ms-5' %>
