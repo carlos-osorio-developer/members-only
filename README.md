@@ -67,16 +67,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+This project is [MIT](./MIT.md) licensed.
